@@ -1,0 +1,26 @@
+p{
+    color: white;
+    background: red;
+    font-size: 50px;
+    font-style:italic;
+}
+/* This is how to refrence an ID. Refrenced by # */
+#box{ 
+    width: 100px;
+    height: 100px;
+    background: green;
+}
+
+/* use the . symbol to refrence classes */
+.box{ 
+    width: 100px;
+    height: 100px;
+    background: red;
+    margin: 10px; /* spacing outside of the box */
+    padding: 10px; /* spacing inside the box */
+    border:2px solid blue;
+    position: absolute;
+    top:0px;
+    left:0px;
+}
+
