@@ -4,13 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <h1>This is new page</h1>
     <div>
-       Keys pressed: <span id="keytext"></span>
+       Keys pressed:
+    <div id="keytext-wrapper"></div>
+    <div id="keytext" class="centered"></div>
+    <div id="debugbox"></div>
+    <div id="centerbox"></div>
+
     <p>testing the keyboard</p> 
     <p id="finish">congrats you finished in: <span id="time"></span></p>
+    <button id="restart">restart!</button>
     </div>
     <br/>
     <script src="script.js"></script>

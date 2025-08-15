@@ -1,3 +1,7 @@
+:root {
+    --charPosX: 0px;
+}
+
 .box{ 
     width: 100px;
     height: 100px;
@@ -5,4 +9,66 @@
     margin: 10px; /* spacing outside of the box */
     padding: 10px; /* spacing inside the box */
     border:2px solid blue;
+}
+
+.centered {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  font-family: monospace;
+  font-size: 64px;
+  white-space: nowrap;
+  transition: transform 0.2s ease;
+  /* Initial transform to center */
+  transform: translate(-50%, -50%);
+}
+
+#debug-box {
+  background-color: rgba(0, 255, 0, 0.1); /* faint green fill */
+}
+
+#centerbox {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  background-color: rgba(165, 42, 42, 0.151);
+  transform: translate(-50%, -50%);
+}
+
+.last-char {
+  display: inline-block;
+  animation: pop 0.3s ease forwards;
+}
+
+@keyframes pop {
+  0% { transform: scale(1); color: inherit; }
+  50% { transform: scale(3); color: orange; }
+  100% { transform: scale(1); color: inherit; }
+}
+
+#keytext {
+  transform: var(--base-transform) var(--shake-transform, translateX(0));
+}
+
+#keytext-wrapper {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.errorAnimation {
+  animation: error 0.5s ease-in-out;
+}
+
+@keyframes error {
+  0%   { --shake-transform: translateX(0); color: inherit; }
+  12.5%  { --shake-transform: translateX(2px); color: red; }
+  25%  { --shake-transform: translateX(-2px); color: red; }
+  37.5%  { --shake-transform: translateX(2px); color: red; }
+  50%  { --shake-transform: translateX(-2px); color: red; }
+  62.5% { --shake-transform: translateX(1px); color: red; }
+  75%  { --shake-transform: translateX(-1px); color: red; }
+  87.5% { --shake-transform: translateX(1px); color: red; }
+  100% { --shake-transform: translateX(0); color: inherit; }
 }
